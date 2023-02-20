@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<body>
+    <referenceBlock name="minicart" remove="true"/>
+    <referenceBlock name="nested" remove="true"/>
+    <referenceBlock name="header.panel.wrapper" remove="true"/>
+    <referenceContainer name="top.links" remove="true"/>
+    <referenceContainer name="top.search" remove="true"/>
+    <move element="logo" destination="header__mobile-title" after="-"/>
+
+
+ <referenceContainer name="header.container" htmlClass="header">
+        <referenceContainer name="header-wrapper" htmlClass="header__mobile">          
+            <container name="header__mobile-title" as="headerMobileTitle" label="header Mobile Title" htmlTag="div" htmlClass="header__mobile-title">
+               <block  class="Magento\Framework\View\Element\Template" name="headerMobi" template="Magento_Theme::headerMobile.phtml"></block>
+            </container>
+        </referenceContainer>
+            
+    </referenceContainer>
+         
+ 
+
+</body>
+</page>
