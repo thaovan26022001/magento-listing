@@ -13,15 +13,22 @@
     <referenceContainer name="top.links" remove="true"/>
     <referenceContainer name="top.search" remove="true"/>
     <move element="logo" destination="header__mobile-title" after="-"/>
+    <move element="page.top" destination="header.container" after="-"/>
+    
 
 
- <referenceContainer name="header.container" htmlClass="header">
+    <referenceContainer name="header.container" htmlClass="header">
         <referenceContainer name="header-wrapper" htmlClass="header__mobile">          
             <container name="header__mobile-title" as="headerMobileTitle" label="header Mobile Title" htmlTag="div" htmlClass="header__mobile-title">
                <block  class="Magento\Framework\View\Element\Template" name="headerMobi" template="Magento_Theme::headerMobile.phtml"></block>
             </container>
         </referenceContainer>
             
+    </referenceContainer>
+    <referenceContainer name="page.top" htmlClass="header__menu-mobi"  htmlTag="div">
+        <container name="header__submenu" htmlClass="header__submenu" htmlTag="div" label="header Submenu" as="headerSubmenu">
+            <block class="Magento\Framework\VIew\Element\Template" name="headerSubmenu" template="Magento_Theme::headerSubmenu.phtml"></block>
+        </container>
     </referenceContainer>
          
  
