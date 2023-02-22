@@ -50,20 +50,22 @@ ul > li, ol > li {
     margin: 0
 }
 .nav-toggle {
-    top: 0;
-    left: 0;
-    position: relative;
-    order: -1;
+    display: none;
 }
 
 .logo {
     margin: 0;
 }
 
+
 @media only screen and (max-width: (@screen__m)) {
     .page-main {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .hide-on-tablet{
+        display: none;
     }
 }
 
@@ -85,10 +87,6 @@ a:hover {
 }
 
 
-
-.hide-on-mobi {
-    display: none;
-}
 
 //base css
 
